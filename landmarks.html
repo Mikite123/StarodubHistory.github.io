@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достопримечательности Стародуба | Исторический город</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/gerb.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="page-transition"></div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/gerb.svg" alt="Герб Стародуба" style="height: 40px; margin-right: 10px;">
+                        Стародуб</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="history.html">История</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="landmarks.html">Достопримечательности</a></li>
+                            <li class="nav-item"><a class="nav-link" href="culture.html">Культура</a></li>
+                            <li class="nav-item"><a class="nav-link" href="map.html">Карта</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-landmarks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center text-md-start">
+                        <h1 class="page-title animate-fade-in">Достопримечательности</h1>
+                        <p class="page-subtitle animate-fade-in delay-1">Архитектурные и исторические памятники города</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="landmarks-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 mb-4 order-lg-2">
+                        <div class="landmarks-nav sticky-top pt-3">
+                            <div class="list-group">
+                                <a href="#cathedral" class="list-group-item list-group-item-action">Собор Рождества Христова</a>
+                                <a href="#nicholas-church" class="list-group-item list-group-item-action">Никольская церковь</a>
+                                <a href="#rubets-monument" class="list-group-item list-group-item-action">Памятник А.И. Рубцу</a>
+                                <a href="#shcheglovitov-monument" class="list-group-item list-group-item-action">Памятник И.Г. Щегловитову</a>
+                                <a href="#victory-park" class="list-group-item list-group-item-action">Парк 40-летия Победы</a>
+                                <a href="#division-square" class="list-group-item list-group-item-action">Сквер 348 дивизии</a>
+                                <a href="#baptism-church" class="list-group-item list-group-item-action">Церковь Богоявления</a>
+                                <a href="#prison-castle" class="list-group-item list-group-item-action">Тюремный замок</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8 order-lg-1">
+                        <!-- Собор Рождества Христова -->
+                        <div class="landmark-item mb-5" id="cathedral">
+                            <div class="landmark-gallery mb-4">
+                                <div id="cathedralCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="img/cathedral1.jpg" class="d-block w-100" alt="Собор Рождества Христова">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/cathedral2.jpg" class="d-block w-100" alt="Собор внутри">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#cathedralCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#cathedralCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <h2 class="landmark-title">Собор Рождества Христова</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">XVII век</span>
+                                <span class="badge bg-secondary">Архитектура</span>
+                                <span class="badge bg-secondary">Религия</span>
+                            </div>
+                            <p class="landmark-text">Построен в конце XVII века, являлся полковым храмом Стародубского полка. Собор представляет собой пятикупольный храм в стиле украинского барокко с элементами московского зодчества.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Первомайская, д. 11</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5847" data-lng="32.7603">Показать на карте</button>
+                        </div>
+
+                        <!-- Никольская церковь -->
+                        <div class="landmark-item mb-5" id="nicholas-church">
+                            <img src="img/nicholas-church.jpg" alt="Никольская церковь" class="img-fluid mb-4 rounded w-100">
+                            <h2 class="landmark-title">Никольская церковь</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">1802 год</span>
+                                <span class="badge bg-secondary">Классицизм</span>
+                            </div>
+                            <p class="landmark-text">Построена в 1802 году в классическом стиле. Храм отличается строгими формами и гармоничными пропорциями, характерными для архитектуры классицизма.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Евсеевская, 23</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5831" data-lng="32.7589">Показать на карте</button>
+                        </div>
+
+                        <!-- Памятник А.И. Рубцу -->
+                        <div class="landmark-item mb-5" id="rubets-monument">
+                            <img src="img/rubets-monument.jpg" alt="Памятник А.И. Рубцу" class="img-fluid mb-4 rounded w-100">
+                            <h2 class="landmark-title">Памятник А.И. Рубцу</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">Культура</span>
+                                <span class="badge bg-secondary">История</span>
+                            </div>
+                            <p class="landmark-text">Посвящён композитору и собирателю русских народных песен Александру Рубцу, проживавшему в Стародубе с 1895 по 1913 год.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Калинина, 13</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5825" data-lng="32.7632">Показать на карте</button>
+                        </div>
+
+                        <!-- Памятник И.Г. Щегловитову -->
+                        <div class="landmark-item mb-5" id="shcheglovitov-monument">
+                            <img src="img/shcheglovitov-monument.jpg" alt="Памятник И.Г. Щегловитову" class="img-fluid mb-4 rounded w-100">
+                            <h2 class="landmark-title">Памятник И.Г. Щегловитову</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">История</span>
+                                <span class="badge bg-secondary">Политика</span>
+                            </div>
+                            <p class="landmark-text">Посвящён уроженцу Стародубского уезда, генерал-прокурору Российской Империи Ивану Щегловитову.</p>
+                            <p class="landmark-text">Адрес: <strong>Советская площадь</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5853" data-lng="32.7618">Показать на карте</button>
+                        </div>
+
+                        <!-- Парк 40-летия Победы -->
+                        <div class="landmark-item mb-5" id="victory-park">
+                            <div class="landmark-gallery mb-4">
+                                <div id="parkCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="img/park1.jpg" class="d-block w-100" alt="Парк 40-летия Победы">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/park2.jpg" class="d-block w-100" alt="Мемориал в парке">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#parkCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#parkCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <h2 class="landmark-title">Парк 40-летия Победы</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">Мемориал</span>
+                                <span class="badge bg-secondary">Отдых</span>
+                            </div>
+                            <p class="landmark-text">В парке находятся памятники десантникам, пограничникам всех поколений и воинам-землякам, погибшим при защите интересов Родины.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Свердлова, 8</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5872" data-lng="32.7654">Показать на карте</button>
+                        </div>
+
+                        <!-- Сквер 348 дивизии -->
+                        <div class="landmark-item mb-5" id="division-square">
+                            <img src="img/division-square.jpg" alt="Сквер 348 дивизии" class="img-fluid mb-4 rounded w-100">
+                            <h2 class="landmark-title">Сквер 348 дивизии</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">ВОВ</span>
+                                <span class="badge bg-secondary">Мемориал</span>
+                            </div>
+                            <p class="landmark-text">Здесь открыт памятник ИС-2, посвящённый освободителям города от немецких захватчиков, и "Стена памяти" жителей Стародуба, не вернувшихся с Великой Отечественной войны.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Калинина, 3</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5815" data-lng="32.7610">Показать на карте</button>
+                        </div>
+
+                        <!-- Церковь Богоявления Господня -->
+                        <div class="landmark-item mb-5" id="baptism-church">
+                            <img src="img/baptism-church.jpg" alt="Церковь Богоявления" class="img-fluid mb-4 rounded w-100">
+                            <h2 class="landmark-title">Церковь Богоявления Господня</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">1789 год</span>
+                                <span class="badge bg-secondary">Барокко</span>
+                            </div>
+                            <p class="landmark-text">Построена в 1789 году в стиле украинского барокко. Храм имеет оригинальную архитектуру с элементами местных традиций.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Фрунзе, 63</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5802" data-lng="32.7598">Показать на карте</button>
+                        </div>
+
+                        <!-- Тюремный замок -->
+                        <div class="landmark-item mb-5" id="prison-castle">
+                            <img src="img/prison-castle.jpg" alt="Тюремный замок" class="img-fluid mb-4 rounded w-100">
+                            <h2 class="landmark-title">Тюремный замок</h2>
+                            <div class="landmark-meta mb-3">
+                                <span class="badge bg-secondary">XIX век</span>
+                                <span class="badge bg-secondary">Архитектура</span>
+                            </div>
+                            <p class="landmark-text">Здание тюрьмы было построено в начале XIX века по проекту архитектора Адриана Захарова. Является памятником архитектуры классицизма.</p>
+                            <p class="landmark-text">Адрес: <strong>ул. Евсеевская, в начале улицы</strong></p>
+                            <button class="btn btn-sm btn-outline-primary show-on-map" data-lat="52.5835" data-lng="32.7572">Показать на карте</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-quiz py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Проверьте свои знания</h2>
+                <div class="quiz-container animate-fade-in">
+                    <div class="quiz-progress mb-3">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3 class="question-text">В каком веке был построен Собор Рождества Христова?</h3>
+                        <div class="question-options row">
+                            <div class="col-12 col-sm-4 mb-2">
+                                <button class="btn btn-outline-primary option-btn w-100">XVI век</button>
+                            </div>
+                            <div class="col-12 col-sm-4 mb-2">
+                                <button class="btn btn-outline-primary option-btn w-100">XVII век</button>
+                            </div>
+                            <div class="col-12 col-sm-4 mb-2">
+                                <button class="btn btn-outline-primary option-btn w-100">XVIII век</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-result d-none">
+                        <h3 class="result-title">Результат</h3>
+                        <p class="result-text">Вы ответили правильно на <span class="correct-answers">0</span> из <span class="total-questions">3</span> вопросов</p>
+                        <button class="btn btn-primary try-again-btn">Попробовать снова</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Колонка 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="footer-title">Стародуб</h3>
+                    <p>Исторический город Брянской области с богатым культурным наследием.</p>
+                    
+                    <div class="social-wrapper">
+                        <div class="social-icons">
+                            <a href="https://t.me/m1kite" class="social-icon" target="_blank" title="Telegram">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/m1kite" class="social-icon" target="_blank" title="ВКонтакте">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://github.com/Mikite123" class="social-icon" target="_blank" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Колонка 2 -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История</a></li>
+                        <li><a href="landmarks.html">Достопримечательности</a></li>
+                        <li><a href="culture.html">Культура</a></li>
+                        <li><a href="map.html">Карта</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Колонка 3 -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> info@starodub-tourism.ru</li>
+                        <li><i class="bi bi-phone me-2"></i> +7 (48348) 2-22-33</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="copyright text-center">
+                &copy; 2025 Стародуб. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

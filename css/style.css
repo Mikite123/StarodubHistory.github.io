@@ -1,0 +1,705 @@
+/* Основные стили */
+:root {
+    --primary-color: #3a5a78;
+    --secondary-color: #6c757d;
+    --accent-color: #d4a762;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Навигация */
+.navbar {
+    padding: 15px 0;
+    transition: all var(--transition-speed);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: var(--dark-color);
+    transition: all var(--transition-speed);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Герой-секция */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: url('../img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-explore {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all var(--transition-speed);
+}
+
+/* Карточки */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.highlight-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Секции */
+.section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--light-color) !important;
+}
+
+/* Подвал */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Страничные заголовки */
+.page-hero {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+.bg-history {
+    background-image: url('../img/history-bg.jpg');
+}
+
+.bg-landmarks {
+    background-image: url('../img/landmarks-bg.jpg');
+}
+
+.bg-culture {
+    background-image: url('../img/culture-bg.jpg');
+}
+
+.bg-map {
+    background-image: url('../img/map-bg.jpg');
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0 20px;
+}
+
+/* Таймлайн */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-date {
+    position: absolute;
+    width: 120px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    top: 0;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: 55%;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -15px;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent white;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -15px;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Карта */
+.map-container {
+    height: 500px;
+    width: 100%;
+}
+
+.map-sidebar {
+    height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.landmark-item {
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.landmark-item:hover {
+    background-color: rgba(58, 90, 120, 0.1);
+}
+
+/* Аудиоплеер */
+.audio-player {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.audio-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.play-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.play-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.time-display {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Квиз */
+.quiz-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.question-text {
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Стили для маркеров на карте */
+.custom-marker {
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+}
+
+.marker-icon {
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+.highlight-marker .marker-icon {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* Стили для маркеров маршрута */
+.route-marker-icon {
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+}
+
+/* Стили для popup на карте */
+.map-popup {
+    min-width: 250px;
+}
+
+.map-popup h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.map-popup .address {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+/* Стили для маршрутов */
+.leaflet-routing-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.leaflet-routing-alt {
+    display: none;
+}
+/* Обновленные стили футера */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0 20px;
+    position: relative;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all var(--transition-speed);
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+/* Стили для социальных иконок */
+.social-wrapper {
+    margin-top: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.2rem;
+    transition: all var(--transition-speed);
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Копирайт */
+.copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .timeline::before {
+        left: 31px;
+    }
+    
+    .timeline-date {
+        left: 0;
+        margin-left: 0;
+        width: 80px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 90px);
+        left: 80px !important;
+    }
+    
+    .timeline-content::after {
+        left: -15px !important;
+        border-width: 15px 15px 15px 0 !important;
+        border-color: transparent white transparent transparent !important;
+    }
+    
+    .map-sidebar {
+        height: auto;
+        margin-bottom: 30px;
+        max-height: 300px;
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 500px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .page-title {
+        font-size: 1.8rem;
+    }
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    .section {
+        padding: 40px 0;
+    }
+    .card-img-top {
+        height: 150px;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-links {
+        margin-bottom: 20px;
+    }
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .page-hero {
+        height: 250px;
+    }
+    .page-title {
+        font-size: 1.6rem;
+    }
+    .timeline-date {
+        position: relative;
+        left: auto;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .timeline-content {
+        width: 100%;
+        left: 0 !important;
+    }
+    .audio-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .progress-bar-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .time-display {
+        margin-top: 5px;
+    }
+}

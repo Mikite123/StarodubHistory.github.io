@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стародуб - исторический город Брянской области</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="icon" href="img/gerb.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="page-transition"></div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="img/gerb.svg" alt="Герб Стародуба" style="height: 40px; margin-right: 10px;">
+                        Стародуб</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="history.html">История</a></li>
+                            <li class="nav-item"><a class="nav-link" href="landmarks.html">Достопримечательности</a></li>
+                            <li class="nav-item"><a class="nav-link" href="culture.html">Культура</a></li>
+                            <li class="nav-item"><a class="nav-link" href="map.html">Карта</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content text-center text-md-start">
+                    <h1 class="hero-title animate-fade-in">Добро пожаловать в Стародуб</h1>
+                    <p class="hero-subtitle animate-fade-in delay-1">Город с богатой историей и культурным наследием</p>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a href="history.html" class="btn btn-primary btn-explore animate-fade-in delay-2">Исследовать</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlights-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title">Исторические жемчужины Стародуба</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card highlight-card animate-slide-up h-100">
+                            <img src="img/cathedral.jpg" class="card-img-top" alt="Собор Рождества Христова">
+                            <div class="card-body">
+                                <h3 class="card-title">Собор Рождества Христова</h3>
+                                <p class="card-text">Построен в конце XVII века, являлся полковым храмом Стародубского полка.</p>
+                                <a href="landmarks.html#cathedral" class="btn btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card highlight-card animate-slide-up delay-1 h-100">
+                            <img src="img/park.jpg" class="card-img-top" alt="Парк 40-летия Победы">
+                            <div class="card-body">
+                                <h3 class="card-title">Парк 40-летия Победы</h3>
+                                <p class="card-text">Памятники десантникам, пограничникам и воинам-землякам.</p>
+                                <a href="landmarks.html#victory-park" class="btn btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card highlight-card animate-slide-up delay-2 h-100">
+                            <img src="img/rubets-monument.jpg" class="card-img-top" alt="Памятник А.И. Рубцу">
+                            <div class="card-body">
+                                <h3 class="card-title">Памятник А.И. Рубцу</h3>
+                                <p class="card-text">Композитору и собирателю русских народных песен.</p>
+                                <a href="landmarks.html#rubets-monument" class="btn btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <img src="img/old-town.jpg" alt="Старый Стародуб" class="img-fluid rounded shadow animate-fade-in w-100">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title">О городе</h2>
+                        <p class="lead">Стародуб — один из древнейших городов Брянской области, впервые упомянутый в 1080 году.</p>
+                        <p>Город сохранил уникальное сочетание архитектурных памятников разных эпох, отражающих его богатую историю как важного центра Северской земли.</p>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <a href="history.html" class="btn btn-outline-primary">Узнать историю</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Колонка 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="footer-title">Стародуб</h3>
+                    <p>Исторический город Брянской области с богатым культурным наследием.</p>
+                    
+                    <div class="social-wrapper">
+                        <div class="social-icons">
+                            <a href="https://t.me/m1kite" class="social-icon" target="_blank" title="Telegram">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/m1kite" class="social-icon" target="_blank" title="ВКонтакте">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://github.com/Mikite123" class="social-icon" target="_blank" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Колонка 2 -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История</a></li>
+                        <li><a href="landmarks.html">Достопримечательности</a></li>
+                        <li><a href="culture.html">Культура</a></li>
+                        <li><a href="map.html">Карта</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Колонка 3 -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> info@starodub-tourism.ru</li>
+                        <li><i class="bi bi-phone me-2"></i> +7 (48348) 2-22-33</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="copyright text-center">
+                &copy; 2025 Стародуб. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

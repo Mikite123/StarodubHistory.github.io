@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта достопримечательностей | Стародуб</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/gerb.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="page-transition"></div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/gerb.svg" alt="Герб Стародуба" style="height: 40px; margin-right: 10px;">
+                        Стародуб</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="history.html">История</a></li>
+                            <li class="nav-item"><a class="nav-link" href="landmarks.html">Достопримечательности</a></li>
+                            <li class="nav-item"><a class="nav-link" href="culture.html">Культура</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="map.html">Карта</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-map">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center text-md-start">
+                        <h1 class="page-title animate-fade-in">Карта достопримечательностей</h1>
+                        <p class="page-subtitle animate-fade-in delay-1">Исследуйте исторические места Стародуба</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 order-md-2 mb-4 mb-md-0">
+                        <div class="map-sidebar bg-white p-3 rounded shadow">
+                            <div class="search-box mb-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Поиск..." id="landmark-search">
+                                    <button class="btn btn-primary" id="search-btn" type="button">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="landmarks-list">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="1">
+                                        <div>
+                                            <h5 class="mb-1">Собор Рождества Христова</h5>
+                                            <small class="text-muted">ул. Первомайская, 11</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="2">
+                                        <div>
+                                            <h5 class="mb-1">Никольская церковь</h5>
+                                            <small class="text-muted">ул. Евсеевская, 23</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="3">
+                                        <div>
+                                            <h5 class="mb-1">Памятник А.И. Рубцу</h5>
+                                            <small class="text-muted">ул. Калинина, 8</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="4">
+                                        <div>
+                                            <h5 class="mb-1">Памятник И.Г. Щегловитову</h5>
+                                            <small class="text-muted">Советская площадь</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="5">
+                                        <div>
+                                            <h5 class="mb-1">Парк 40-летия Победы</h5>
+                                            <small class="text-muted">ул. Свердлова, 8</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="6">
+                                        <div>
+                                            <h5 class="mb-1">Сквер 348 дивизии</h5>
+                                            <small class="text-muted">ул. Калинина, 3</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="7">
+                                        <div>
+                                            <h5 class="mb-1">Церковь Богоявления</h5>
+                                            <small class="text-muted">ул. Фрунзе, 63</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action landmark-item d-flex justify-content-between align-items-center" data-id="8">
+                                        <div>
+                                            <h5 class="mb-1">Тюремный замок</h5>
+                                            <small class="text-muted">ул. Евсеевская</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 order-md-1">
+                        <div id="map" class="map-container rounded shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="route-section py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title">Маршруты для прогулок</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-6 mb-4">
+                        <div class="route-card animate-slide-right h-100">
+                            <div class="route-img" style="background-image: url('img/historic-route.jpg');"></div>
+                            <div class="route-body p-4">
+                                <h3 class="route-title">Исторический центр</h3>
+                                <p class="route-description">2-часовая прогулка по самым значимым архитектурным памятникам Стародуба.</p>
+                                <div class="route-stats d-flex justify-content-between mb-3">
+                                    <span><i class="bi bi-clock me-2"></i>2 часа</span>
+                                    <span><i class="bi bi-signpost me-2"></i>3.5 км</span>
+                                    <span><i class="bi bi-geo-alt me-2"></i>5 мест</span>
+                                </div>
+                                <button class="btn btn-outline-primary show-route w-100" data-route="historic">Показать маршрут</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-10 col-lg-6 mb-4">
+                        <div class="route-card animate-slide-left h-100">
+                            <div class="route-img" style="background-image: url('img/memorial-route.jpg');"></div>
+                            <div class="route-body p-4">
+                                <h3 class="route-title">Памятные места</h3>
+                                <p class="route-description">Маршрут по местам, связанным с Великой Отечественной войной.</p>
+                                <div class="route-stats d-flex justify-content-between mb-3">
+                                    <span><i class="bi bi-clock me-2"></i>1.5 часа</span>
+                                    <span><i class="bi bi-signpost me-2"></i>2.8 км</span>
+                                    <span><i class="bi bi-geo-alt me-2"></i>3 места</span>
+                                </div>
+                                <button class="btn btn-outline-primary show-route w-100" data-route="memorial">Показать маршрут</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Колонка 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="footer-title">Стародуб</h3>
+                    <p>Исторический город Брянской области с богатым культурным наследием.</p>
+                    
+                    <div class="social-wrapper">
+                        <div class="social-icons">
+                            <a href="https://t.me/m1kite" class="social-icon" target="_blank" title="Telegram">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/m1kite" class="social-icon" target="_blank" title="ВКонтакте">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://github.com/Mikite123" class="social-icon" target="_blank" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Колонка 2 -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История</a></li>
+                        <li><a href="landmarks.html">Достопримечательности</a></li>
+                        <li><a href="culture.html">Культура</a></li>
+                        <li><a href="map.html">Карта</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Колонка 3 -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> info@starodub-tourism.ru</li>
+                        <li><i class="bi bi-phone me-2"></i> +7 (48348) 2-22-33</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="copyright text-center">
+                &copy; 2025 Стародуб. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>

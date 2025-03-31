@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Культурное наследие Стародуба | Исторический город</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/gerb.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="page-transition"></div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/gerb.svg" alt="Герб Стародуба" style="height: 40px; margin-right: 10px;">
+                        Стародуб</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="history.html">История</a></li>
+                            <li class="nav-item"><a class="nav-link" href="landmarks.html">Достопримечательности</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="culture.html">Культура</a></li>
+                            <li class="nav-item"><a class="nav-link" href="map.html">Карта</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-culture">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center text-md-start">
+                        <h1 class="page-title animate-fade-in">Культурное наследие</h1>
+                        <p class="page-subtitle animate-fade-in delay-1">Традиции, искусство и знаменитые личности</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="culture-section py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 col-md-6 mb-4 mb-md-0">
+                        <h2 class="section-title">Музыкальные традиции</h2>
+                        <p>Стародуб известен своими музыкальными традициями, во многом благодаря деятельности композитора Александра Рубца.</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="audio-player animate-fade-in">
+                            <h3 class="audio-title">Русская народная песня в обработке А.И. Рубца</h3>
+                            <div class="audio-container">
+                                <audio id="folk-song" src="audio/folk-song.mp3"></audio>
+                                <button class="play-btn"><i class="bi bi-play-fill"></i></button>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span> / <span class="duration">1:57</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5" id="rubets">
+                    <div class="col-12 col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                        <img src="img/rubets-house.jpg" alt="Дом Рубца" class="img-fluid rounded shadow animate-slide-left w-100">
+                    </div>
+                    <div class="col-12 col-lg-6 order-lg-1">
+                        <h2 class="section-title">Александр Иванович Рубец</h2>
+                        <p>Композитор и собиратель русских народных песен, проживавший в Стародубе с 1895 по 1913 год. Рубец записал и обработал более 800 народных песен.</p>
+                        <p>В Стародубе сохранился дом, где жил композитор, а на улице Калинина установлен памятник в его честь.</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a href="landmarks.html#rubets-monument" class="btn btn-outline-primary">Посмотреть памятник</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Фестивали и события</h2>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="event-card animate-slide-up h-100">
+                            <div class="event-date bg-primary text-white">
+                                <span class="day d-block">15</span>
+                                <span class="month d-block">Июня</span>
+                            </div>
+                            <div class="event-body">
+                                <h3 class="event-title">День города</h3>
+                                <p class="event-description">Ежегодное празднование дня основания Стародуба с ярмарками, концертами и историческими реконструкциями.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="event-card animate-slide-up delay-1 h-100">
+                            <div class="event-date bg-primary text-white">
+                                <span class="month d-block">Август</span>
+                            </div>
+                            <div class="event-body">
+                                <h3 class="event-title">Фестиваль народной песни</h3>
+                                <p class="event-description">Посвящен памяти А.И. Рубца, собирателя народных песен. Участвуют коллективы со всей Брянской области.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="event-card animate-slide-up delay-2 h-100">
+                            <div class="event-date bg-primary text-white">
+                                <span class="month d-block">Сентябрь</span>
+                            </div>
+                            <div class="event-body">
+                                <h3 class="event-title">День освобождения</h3>
+                                <p class="event-description">Торжественные мероприятия в честь освобождения Стародуба от немецко-фашистских захватчиков в 1943 году.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Колонка 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="footer-title">Стародуб</h3>
+                    <p>Исторический город Брянской области с богатым культурным наследием.</p>
+                    
+                    <div class="social-wrapper">
+                        <div class="social-icons">
+                            <a href="https://t.me/m1kite" class="social-icon" target="_blank" title="Telegram">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/m1kite" class="social-icon" target="_blank" title="ВКонтакте">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://github.com/Mikite123" class="social-icon" target="_blank" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Колонка 2 -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История</a></li>
+                        <li><a href="landmarks.html">Достопримечательности</a></li>
+                        <li><a href="culture.html">Культура</a></li>
+                        <li><a href="map.html">Карта</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Колонка 3 -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> info@starodub-tourism.ru</li>
+                        <li><i class="bi bi-phone me-2"></i> +7 (48348) 2-22-33</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="copyright text-center">
+                &copy; 2025 Стародуб. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/audio-player.js"></script>
+</body>
+</html>

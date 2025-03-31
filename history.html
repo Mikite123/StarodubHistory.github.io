@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Стародуба | Исторический город</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/gerb.svg" type="image/svg+xml">
+    <style>
+        /* Стили для таймлайна */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #3a5a78;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            width: 120px;
+            background-color: #3a5a78;
+            color: white;
+            text-align: center;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            top: 0;
+            left: 50%;
+            margin-left: -60px;
+            z-index: 1;
+        }
+        
+        .timeline-content {
+            position: relative;
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            left: 55%;
+        }
+        
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -15px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -15px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        /* Адаптивные стили */
+        @media (max-width: 992px) {
+            .timeline::before {
+                left: 50px;
+            }
+            
+            .timeline-date {
+                left: 0;
+                margin-left: 0;
+                width: 100px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 120px);
+                left: 120px !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -15px;
+                border-width: 15px 15px 15px 0 !important;
+                border-color: transparent white transparent transparent !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-date {
+                width: 80px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 90px);
+                left: 80px !important;
+            }
+        }
+        
+        /* Стили для карточек */
+        .figure-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .figure-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .figure-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .figure-body .btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition"></div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/gerb.svg" alt="Герб Стародуба" style="height: 40px; margin-right: 10px;">
+                        Стародуб</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="history.html">История</a></li>
+                            <li class="nav-item"><a class="nav-link" href="landmarks.html">Достопримечательности</a></li>
+                            <li class="nav-item"><a class="nav-link" href="culture.html">Культура</a></li>
+                            <li class="nav-item"><a class="nav-link" href="map.html">Карта</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero bg-history">
+            <div class="container">
+                <h1 class="page-title animate-fade-in">История Стародуба</h1>
+                <p class="page-subtitle animate-fade-in delay-1">От древних времен до наших дней</p>
+            </div>
+        </section>
+
+        <section class="timeline-section py-5">
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-item animate-slide-right">
+                        <div class="timeline-date">1080</div>
+                        <div class="timeline-content">
+                            <h3>Первое упоминание</h3>
+                            <p>Стародуб впервые упоминается в летописях как город Черниговского княжества.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slide-left">
+                        <div class="timeline-date">1370</div>
+                        <div class="timeline-content">
+                            <h3>В составе Великого княжества Литовского</h3>
+                            <p>Город вошёл в состав ВКЛ и стал центром Стародубского уезда.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slide-right">
+                        <div class="timeline-date">1503</div>
+                        <div class="timeline-content">
+                            <h3>В составе Московского государства</h3>
+                            <p>По Благовещенскому перемирию Стародуб перешёл к Московскому княжеству.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slide-left">
+                        <div class="timeline-date">XVII век</div>
+                        <div class="timeline-content">
+                            <h3>Центр Стародубского полка</h3>
+                            <p>Город становится административным центром Стародубского полка Гетманщины.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slide-right">
+                        <div class="timeline-date">1918</div>
+                        <div class="timeline-content">
+                            <h3>Советский период</h3>
+                            <p>После революции Стародуб становится уездным городом Брянской губернии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slide-left">
+                        <div class="timeline-date">1941-1943</div>
+                        <div class="timeline-content">
+                            <h3>Оккупация в годы ВОВ</h3>
+                            <p>Город был оккупирован немецкими войсками с 1941 по 1943 год.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slide-right">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>Современный Стародуб</h3>
+                            <p>Сегодня Стародуб - районный центр Брянской области, сохраняющий богатое историческое наследие.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="historical-figures py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Исторические личности</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="figure-card animate-fade-in">
+                            <img src="img/rubets-portrait.jpg" alt="А.И. Рубец" class="figure-img">
+                            <div class="figure-body">
+                                <h3>Александр Иванович Рубец</h3>
+                                <p>Композитор и собиратель русских народных песен, проживавший в Стародубе с 1895 по 1913 год.</p>
+                                <a href="culture.html#rubets" class="btn btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="figure-card animate-fade-in delay-1">
+                            <img src="img/shcheglovitov.jpg" alt="И.Г. Щегловитов" class="figure-img">
+                            <div class="figure-body">
+                                <h3>Иван Григорьевич Щегловитов</h3>
+                                <p>Уроженец Стародубского уезда, генерал-прокурор Российской Империи.</p>
+                                <a href="https://ru.wikipedia.org/wiki/Щегловитов,_Иван_Григорьевич" target="_blank" class="btn btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Колонка 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="footer-title">Стародуб</h3>
+                    <p>Исторический город Брянской области с богатым культурным наследием.</p>
+                    
+                    <div class="social-wrapper">
+                        <div class="social-icons">
+                            <a href="https://t.me/m1kite" class="social-icon" target="_blank" title="Telegram">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/m1kite" class="social-icon" target="_blank" title="ВКонтакте">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://github.com/Mikite123" class="social-icon" target="_blank" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Колонка 2 -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История</a></li>
+                        <li><a href="landmarks.html">Достопримечательности</a></li>
+                        <li><a href="culture.html">Культура</a></li>
+                        <li><a href="map.html">Карта</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Колонка 3 -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope me-2"></i> info@starodub-tourism.ru</li>
+                        <li><i class="bi bi-phone me-2"></i> +7 (48348) 2-22-33</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="copyright text-center">
+                &copy; 2025 Стародуб. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
